@@ -24,7 +24,7 @@ The above example passes two lines to check intersection. See table below for ot
 
 | Argument | Shape   | Value       |
 |----------|---------|-------------|
-| l        | line1   | x1,y1,x2,2  |
+| l        | line1   | x1,y1,x2,y2  |
 | m        | line2   | x1,y1,x2,y2 |
 | c        | circle1 | x,y,r       |
 | d        | circle2 | x,y,r       |
