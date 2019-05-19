@@ -9,7 +9,7 @@ include_once('./Circle.php');
 class PointTest extends TestCase
 {
     /**
-     * Test that two lines intersecting returns true.
+     * Test that a point and circle intersecting returns true.
      *
      * @return void
      */
@@ -24,7 +24,7 @@ class PointTest extends TestCase
     }
 
     /**
-     * Test that two lines intersecting returns false.
+     * Test that a point and circle intersecting returns false.
      *
      * @return void
      */

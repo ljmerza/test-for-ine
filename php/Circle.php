@@ -18,6 +18,7 @@ class Circle
 	 * Does a circle intersect another circle?
 	 * (Does not include if circle is within circle)
 	 * 
+   * @param string $circle the circle to see if it intersects
 	 * @return bool
 	 */
 	public function intersect($circle)
@@ -36,7 +37,7 @@ class Circle
 /**
  * check that a circle argument is in the correct format
  * 
- * @param string $circle
+ * @param string $circle the circle argument to parse
  * @return bool
  */
 $checkCircle = function($circle)
@@ -60,7 +61,7 @@ $checkCircle = function($circle)
 /**
  * create a circle from a circle argument
  * 
- * @param string $circle
+ * @param string $circle the circle argument to parse
  * @return Circle
  */
 $createCircle = function($circle) 

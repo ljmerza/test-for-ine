@@ -17,6 +17,7 @@ class Point
   /**
 	 * Is the point inside a given circle?
 	 * 
+   * @param string $circle the circle to see if it intersects
 	 * @return bool
 	 */
 	public function intersect($circle)
@@ -31,7 +32,7 @@ class Point
 /**
  * check that a point argument is in the correct format
  * 
- * @param string $point
+ * @param string $point the point argument to parse
  * @return bool
  */
 $checkPoint = function($point)
@@ -55,7 +56,7 @@ $checkPoint = function($point)
 /**
  * create a circle from a circle argument
  * 
- * @param string $point
+ * @param string $point the point argument to parse
  * @return Point
  */
 $createPoint = function($point) 

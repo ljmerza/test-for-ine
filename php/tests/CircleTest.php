@@ -26,7 +26,7 @@ class CircleTest extends TestCase
     }
 
     /**
-     * Test that two linecircless intersecting returns false.
+     * Test that two circles intersecting returns false.
      *
      * @return void
      */

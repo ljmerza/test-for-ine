@@ -25,7 +25,7 @@ module.exports.Point = Point;
 
 /**
  * create a circle from a circle argument
- * @param {string} $point
+ * @param {string} point
  * @return {Point}
  */
 module.exports.createPoint = function(point) {

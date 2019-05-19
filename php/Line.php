@@ -17,6 +17,7 @@ class Line
   /**
 	 * do two lines intersect?
    * 
+   * @param string $line the line to see if it intersects
 	 * @return bool
 	 */
   public function intersect($line)
@@ -41,7 +42,7 @@ class Line
 /**
  * check that a line argument is in the correct format
  * 
- * @param string $line
+ * @param string $line the line argument to parse
  * @return bool
  */
 $checkLine = function($line)
@@ -65,7 +66,7 @@ $checkLine = function($line)
 /**
  * create a line from a line argument
  * 
- * @param string $line
+ * @param string $line the line argument to parse
  * @return Line
  */
 $createLine = function($line) 
