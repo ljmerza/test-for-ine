@@ -67,7 +67,7 @@ $createCircle = function($circle)
 {
     list($x, $y, $radius) = explode(",", $circle);
     $point = new Point($x, $y);
-    return new Line($point, $radius);
+    return new Circle($point, $radius);
 };
 
 ?>

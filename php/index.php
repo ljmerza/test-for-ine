@@ -48,7 +48,7 @@ if($line1 && $line2){
   echo "$message\n";
 }
 
-// check fore two circles
+// check for two circles
 $circle1 = $cmd['circle1'];
 $circle2 = $cmd['circle2'];
 

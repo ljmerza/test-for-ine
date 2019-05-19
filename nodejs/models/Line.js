@@ -1,8 +1,10 @@
+const Point = require('./Point').Point;
+
 
 /**
  * A line with a start and end Point
  */
-export default class Line {
+class Line {
 
     constructor(p1, p2) {
         this.p1 = p1;
@@ -11,16 +13,37 @@ export default class Line {
 
     /**
      * do two lines intersect?
-     * @return bool
+     * @param {Line} line
+     * @return {boolean}
      */
     intersect(line) {
-        const a1 = line.p2.y - line.p1.y;
-        const b1 = line.p1.x - line.p2.x;
+        const p1 = line.p1;
+        const q1 = line.p2;
+        const p2 = this.p2;
+        const q2 = this.p2;
 
-        const a2 = this.p2.y - this.p1.y;
-        const b2 = this.p1.x - this.p2.x;
+        const left = Math.max(Math.min(p1.x, q1.x), Math.min(p2.x, q2.x));
+        const right = Math.min(Math.max(p1.x, q1.x), Math.max(p2.x, q2.x));
+        const top = Math.max(Math.min(p1.y, q1.y), Math.min(p2.y, q2.y));
+        const bottom = Math.min(Math.max(p1.y, q1.y), Math.max(p2.y, q2.y));
 
-        const determinant = a1 * b2 - a2 * b1;
-        return determinant == 0;
+        if (top > bottom || left > right)
+            return false;
+
+        return true;
     }
 }
+module.exports.Line = Line;
+
+
+/**
+ * create a line from a line argument
+ * @param {string} line
+ * @return {Line}
+ */
+module.exports.createLine = function(line) {
+    const [x1, y1, x2, y2] = line.split(',');
+    const point1 = new Point(x1, y1);
+    const point2 = new Point(x2, y2);
+    return new Line(point1, point2);
+};
