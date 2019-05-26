@@ -1,2 +1,3 @@
 /php/vendor/*
 /nodejs/node_modules/*
+python/models/__pycache__/*

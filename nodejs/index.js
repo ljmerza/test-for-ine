@@ -1,6 +1,6 @@
 const commander = require('commander');
 
-const creatCircle = require('./models/Circle').creatCircle;
+const createCircle = require('./models/Circle').createCircle;
 const createPoint = require('./models/Point').createPoint;
 const createLine = require('./models/Line').createLine;
 
@@ -27,8 +27,8 @@ if (line1 && line2) {
 }
 
 // check for two circles
-const circle1 = program.circle1 && creatCircle(program.circle1);
-const circle2 = program.circle2 && creatCircle(program.circle2);
+const circle1 = program.circle1 && createCircle(program.circle1);
+const circle2 = program.circle2 && createCircle(program.circle2);
 
 if (circle1 && circle2) {
     const intersect = circle1.intersect(circle2) ? "" : "Not ";
@@ -36,7 +36,7 @@ if (circle1 && circle2) {
 }
 
 // check for a point and circle
-const circle = program.circle1 && creatCircle(program.circle1) || program.circle2 && creatCircle(program.circle2);
+const circle = program.circle1 && createCircle(program.circle1) || program.circle2 && createCircle(program.circle2);
 const point = program.point && createPoint(program.point);
 
 if (circle && point) {
