@@ -41,7 +41,7 @@ cd ~/test-for-ine/php/
 docker run --rm -v $(pwd):/app -w /app php:cli php ./vendor/bin/phpunit tests/
 ```
 
-## Node app
+## Node App
 
 To run the node app go into the nodejs folder and build the docker file
 
@@ -54,6 +54,15 @@ Run the docker image and pass agruments using the table above:
 
 ```bash
 docker run ine-test node index -l 2,3,4,5 -m 4,3,5,6
+```
+
+## Python App
+
+To run the python app go into the python folder and build the docker file
+
+```bash
+cd ~/test-for-ine/python/
+docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp python:3 python index.py -l 2,3,4,5 -m 4,3,5,6
 ```
 
 
